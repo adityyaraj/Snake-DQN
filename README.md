@@ -2,6 +2,14 @@
 
 A Python implementation of the classic Snake game powered by Deep Q-Learning Network (DQN). This project combines PyGame for visualization with PyTorch for deep reinforcement learning, creating an AI agent that learns to play Snake through experience.
 
+<p align="center"> 
+
+
+https://github.com/user-attachments/assets/09819538-3a64-4d71-b6bd-bed7e211ccbf
+
+
+</p>
+
 ## Features
 
 - Classic Snake game implementation using PyGame
