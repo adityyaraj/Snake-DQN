@@ -32,8 +32,8 @@ torch
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/snake-ai-dqn.git
-cd snake-ai-dqn
+git clone [https://github.com/yourusername/snake-ai-dqn.git](https://github.com/Abhigyan126/Snake-DQN)
+cd Snake-DQN
 ```
 
 2. Install dependencies:
@@ -46,7 +46,7 @@ pip install pygame numpy torch
 Run the main script to start training:
 
 ```bash
-python snake_game.py
+python train.py
 ```
 
 You'll be presented with three options:
