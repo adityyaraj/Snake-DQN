@@ -32,7 +32,7 @@ torch
 
 1. Clone the repository:
 ```bash
-git clone [https://github.com/yourusername/snake-ai-dqn.git](https://github.com/Abhigyan126/Snake-DQN)
+git clone https://github.com/Abhigyan126/Snake-DQN
 cd Snake-DQN
 ```
 
