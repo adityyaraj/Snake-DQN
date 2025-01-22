@@ -62,25 +62,30 @@ The training process will display:
 
 ## Technical Details
 
-## TEST
+## TRAIN
 ```mermaid
-%%{init: {'theme': 'default', 'themeVariables': { 'fontSize': '16px'}, "securityLevel": "loose"}}%%
-  graph TD
-    A[Game State] --> B[State Processing]
-    B --> C[Input Layer <br> 12 features]
-    C --> D[Hidden Layer 1 <br> 64 neurons]
-    D --> E[Hidden Layer 2 <br> 64 neurons]
-    E --> F[Hidden Layer 3 <br> 128 neurons]
-    F --> G[Hidden Layer 4 <br> 64 neurons]
-    G --> H[Output Layer <br> 4 actions]
-    H --> I{Action Selection}
-    I --> J[Move Snake]
-    J --> |Update State| A
-    K[Game Events] --> L{Check Conditions}
-    L -->|Eat Food| M[Increase Score]
-    L -->|Hit Wall/Self| N[Game Over]
-    M --> A
-    N --> A
+flowchart LR
+    subgraph Game["Snake Game Environment"]
+        State["State\n(12 inputs)"] --> Action
+        Action --> Reward
+        Action --> NextState["Next State"]
+    end
+
+    subgraph Agent["DQN Agent"]
+        Policy["Policy Network\n(5 layers)"]
+        Target["Target Network\n(5 layers)"]
+        Memory["Replay Buffer\n(10000 capacity)"]
+        
+        Policy --> |"Select Action"| Action
+        State --> Policy
+        Memory --> |"Batch (64)"| Policy
+        Policy --> |"Update"| Target
+    end
+
+    State --> Memory
+    Action --> Memory
+    Reward --> Memory
+    NextState --> Memory
   ```
 
 ### Neural Network Architecture
