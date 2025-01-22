@@ -62,8 +62,7 @@ The training process will display:
 
 ## Technical Details
 
-<div>
-  ##TEST
+## TEST
 ```mermaid
 %%{init: {'theme': 'default', 'themeVariables': { 'fontSize': '16px'}, "securityLevel": "loose"}}%%
   graph TD
@@ -83,7 +82,6 @@ The training process will display:
     M --> A
     N --> A
   ```
-</div>
 
 ### Neural Network Architecture
 - Input layer: 12 nodes (state space)
