@@ -62,7 +62,7 @@ The training process will display:
 
 ## Technical Details
 
-## TRAIN
+# Training pipeline
 ```mermaid
 flowchart LR
     subgraph Game["Snake Game Environment"]
